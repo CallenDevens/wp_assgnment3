@@ -1,0 +1,151 @@
+/*
+color:
+background: #bfbfbf;
+picked: #305f88;
+available:#858585;
+unavailable:#131211;
+
+*/
+*{
+margin:0px;
+}
+#container{
+   width:1230px;
+   margin:0 auto;
+
+}
+#room{
+    width:900px;
+	float:left;
+
+}
+#front, #back{
+background-color:#990052;
+border-radius:5px;
+width:900px;
+height:30px;
+	font-family: Arial, Helvetica, sans-serif;
+color:snow;
+font-size:14pt;
+text-align:center;
+}
+div.column{
+    text-align:center;
+	background-color:#bfbfbf;
+	margin-top:2px auto;
+	width:900px;
+	margin:0 auto;
+}
+div.column ul{
+   padding-left:0px;
+   margin-top:5px;
+   margin-bottom:5px;
+   display:inline-block;
+   list-style-type:none;
+}
+div.column ul li{
+    margin-left:5px;
+    display:inline;
+    border:1px solid snow;
+	float:left;
+	color:snow;
+	border-radius:5px;
+	overflow:hidden;
+	position:relative;
+}
+input[type=checkbox]{
+    position:absolute;
+	top:-15px;
+}
+div.seat_available,div.seat_unavailable{
+    height:40px;
+	width:40px;
+}
+div.seat_available{
+    background-color:#858585;
+}
+div.seat_unavailable{
+    background-color:#131211;
+}
+
+div.beanbag_available,div.beanbag_unavailable{
+    height:40px;
+	width:80px;
+}
+div.beanbag_available{
+    background-color:#858585;
+}
+div.beanbag_unavailable{
+    background-color:#131211;
+}
+
+div#picker{
+    width:320px;
+	height:500px;
+    border-radius:5px;
+    border:1px solid #305f88;
+    float:right;
+    min-height:200px;
+}
+
+
+#picker h2{
+    height: 30px;
+	font-size:14pt;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #2E4E7E;
+	margin:10px;
+	padding-left:10px;
+	border-bottom:1px dotted #66665E;
+}
+#picker p#total{
+	font-family: Arial, Helvetica, sans-serif;
+    float:right;
+    margin-right:40px;
+	margin-top:10px;
+}
+.orderline{
+    padding-top:10px;
+     height:30px;
+     width:300px;
+     margin-left:10px;	 
+	 border-bottom:1px dotted;
+	 position:relative;
+	 overflow:hidden;
+}
+.orderline input{
+	left:-100px;
+	top:-50px;
+    position:absolute;
+}
+.orderline p{
+   float:left;
+   margin-left:5px;
+   margin-right:10px;
+   display:inline;
+   width:30px;
+}
+.orderline div{
+   color:"#66665E";
+   font-family: Arial, Helvetica, sans-serif;
+   float:left;
+   font-size:10pt;
+   font-style:bold;
+   padding-top:2px;
+   margin-right:5px;
+   border:1px solid;
+   border-radius:5px;
+   height:17px;
+   width:60px;
+   text-align:center;
+   background-color:#FFFFF0;
+}
+.orderline div:hover{
+    color:#FFFFF0;
+	background-color:#2E4E7E;
+}
+
+span.class{
+margin-right:5px;
+width:10px;
+}
