@@ -1,0 +1,73 @@
+#shopping_cart{
+margin-left:50px;
+margin-bottom:20px;
+}
+.order{
+
+border-bottom:1px dotted;
+border:1px solid 	#2E4E7E;
+width:410px;
+padding-left:10px;
+}
+.order p{
+	font-family: Arial, Helvetica, sans-serif;
+}
+.order p span{
+ font-weight:bold;
+ color:#2E4E7E;
+ 
+ }
+.order h3{
+    font-family: Verdana;
+	color:#2E4E7E;
+	margin-bottom:0px;
+	line-height:5px;
+	font-size:14pt;
+}
+.order  table{
+    width:400px;
+    margin-top:0px;
+	text-align:center;
+    border:1px solid rgb(44, 47, 109);
+}
+
+.order  table td, .order  table th {
+    padding: 5px 5px;
+    font-size: 100%;
+    font-family: Verdana;
+    color: rgb(149, 170, 109);
+}
+
+.order  table thead, .order  table tr {
+    border-top: 1px solid rgb(44, 47, 109);
+	border-bottom: 1px solid rgb(44, 47, 109);
+}
+
+.order  table  tr:nth-child(2n)
+{
+    background-color:  rgba(230, 238, 214,0.9);
+}
+.order  table   tr:nth-child(2n+1) 
+{
+    background-color: snow;
+}
+.delete_item {
+   color:"#66665E";
+   font-family: Arial, Helvetica, sans-serif;
+margin-left:240px;
+   font-size:12pt;
+   font-style:bold;
+   padding-top:5px;
+   margin-top:10px;
+   margin-bottom:10px;
+   border:1px solid;
+   border-radius:5px;
+   height:25px;
+   width:150px;
+   text-align:center;
+   background-color:#FFFFF0;
+}
+.delete_item:hover{
+    color:#FFFFF0;
+	background-color:#2E4E7E;
+}

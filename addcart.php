@@ -15,39 +15,41 @@ else if(is_array($_SESSION['screenings']))
     //1 :the film order (the same title day time has already exists in $_SESSION['screenings'])
     //0 :the film order is not in $_SESSION['screenings'] yet.
     $insert_flag=0; 
-    foreach($_SESSION['screenings'] as $orderline)
+    foreach($_SESSION['screenings'] as $key=> $orderline)
     {
          //If the film order exists in the  cart, add it into $_SESSION['screenings']'s seats
          if($screening_data['title']==$orderline['title']
 		    &&$screening_data['day']==$orderline['day']
     	    &&$screening_data['time']==$orderline['time'])
     	 {
-    	     $orderline['seats']=array_merge((array)$orderline['seats'],(array)$screening_data['seats']);
+		 //test
+		     echo "Merge!!!!!!!";
+    	     $_SESSION['screenings'][$key]['seats']=array_merge($orderline['seats'],$screening_data['seats']);
 			 $insert_flag=1;
-    		 break;
+			 
+			 print_r($_SESSION['screenings'][$key]['seats']);
+    		 
+			 break;
     	 }    
     }
 	if($insert_flag==0){
 	       $_SESSION['screenings'][]=$screening_data;
 	}
 }
-/*
+
 include('connect.php');  //update ticket state in database
 $update_tickets=$connection->prepare('update seats set state="1" where mvTitle=:title AND day=:day AND time=:time AND seat_number=:seat_number');
-$update_tickets->bindParam(':title',$screening_data->title);
-$update_tickets->bindParam(':day',$screening_data->day);
-$update_tickets->bindParam(':time',$screening_data->time);
+$update_tickets->bindParam(':title',$screening_data['title']);
+$update_tickets->bindParam(':day',$screening_data['day']);
+$update_tickets->bindParam(':time',$screening_data['time']);
 
-foreach((array)($screening_data->seats) as $type => $seat){
+foreach($screening_data['seats'] as $type => $seat){
     //echo "type:".$type;
-    $update_tickets->bindParam('seat_number',$type);
+    $update_tickets->bindParam(':seat_number',$type);
 	$update_tickets->execute();
 	error_reporting(E_ALL);
 }
-*/
-
-print_r($_SESSION['screenings']);
-//session_unset();
+// session_unset();
 
 
 ?>
