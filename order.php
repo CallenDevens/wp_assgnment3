@@ -23,7 +23,7 @@
       <h2>Confirm Your Tickets Here</h2>
 	  
 	  <p id="total">Total: $<span>0.00<span><p>
-	  <button onclick="addToCart()">SUBMIT</button>
+	  <button id="submit" onclick="addToCart()">SUBMIT</button>
   </div>
   
 <div id="room">
@@ -116,10 +116,19 @@ while($result=$display_seats->fetch(PDO::FETCH_ASSOC)){
  
  </div>
  <div id="back" >Back Row. Furthest from Screen</div>
- <div class='seat_available'></div><span>Available<span>
-  <div class='seat_unavailable'></div><span>Taken<span>
-   <div class='seat_available' style="background-color:#305f88;"></div><span>Your seat<span>
+ <div id="example">
+ <div class="example_wrap">
+    <div class="example_seat" style="background-color:#858585;"></div><span>Available<span>
+ </div>
 
+  <div class="example_wrap">
+    <div class='example_seat' style="background-color:#131211;"></div><span>Taken<span>
+ </div>
+
+ <div class="example_wrap">
+   <div class='example_seat' style="background-color:#305f88;"></div><span>Your seat<span>
+ </div>
+</div>
 </div>
 
 

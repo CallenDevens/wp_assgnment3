@@ -128,7 +128,7 @@ function addToCart(){
 //		console.log("input:"+$(".orderline input[type='radio']:checked").length);
 //		console.log("orderline:"+$(".orderline").length);	
 //		alert("error!");
-
+        alert("Please choose ticket type..");
 		return;
 	}
 
@@ -178,7 +178,28 @@ function addToCart(){
         data: {"screening": jsonData},
 		dataType:"json",
 		complete: function(){
-			alert("complete!");
+			addSuccess();;
 		}
     });
 }
+
+function addSuccess(){
+	//show mask
+	var newMask=document.createElement("div");
+	newMask.id="mask";
+	newMask.style.width=document.body.scrollWidth+"px";
+	newMask.style.height=document.body.scrollHeight+"px";
+	document.body.appendChild(newMask);
+	
+	//show info messageBox
+	var prompt_info=document.createElement("div");
+	prompt_info.id="prompt";
+	prompt_info.innerHTML="<p>Your order has been added to shopping cart successfully!</p>";
+	prompt_info.style.top=(document.documentElement.clientHeight/2-150/2)+"px";
+	prompt_info.style.left=(document.documentElement.clientWidth/2-350/2)+"px";
+	document.body.appendChild(prompt_info);
+	
+    setTimeout(function(){ window.close(); }, 2000);
+}
+
+

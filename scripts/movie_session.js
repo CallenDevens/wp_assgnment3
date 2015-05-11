@@ -8,3 +8,9 @@ $(document).ready(function(){
         $(this).html(ticket);
     });
 })
+function popitup(url)
+{
+   newwindow=window.open(url,'order','height=700,width=1300');
+   if (window.focus) {newwindow.focus()}
+   return false;
+}
