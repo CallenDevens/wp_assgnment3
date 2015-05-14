@@ -23,6 +23,7 @@ if(strcmp($title,"all")==0){
     	}
     }
    unset($_SESSION['screenings']);
+   unset($_SESSION['voucher']);
 }
 else
 {

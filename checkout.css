@@ -1,0 +1,48 @@
+#customer_information{
+width:600px;
+margin:20px auto;
+
+}
+#customer_information h3{
+font-family: Verdana;
+}
+#customer_information p{
+   display:inline; 
+   margin-left:10px;
+   	font-family: Arial, Helvetica, sans-serif;
+}
+#response{
+    width:600px;
+	margin:20px auto;
+}
+#response h2{
+font-family: Verdana;
+}
+#response p{
+   	font-family: Arial, Helvetica, sans-serif;
+	font-size:12pt;
+}
+#reponse table {
+border-spacing: 10px;
+
+}
+#response table p{
+}
+#response  span{
+font-family: Verdana;
+color:#2E4E7E;
+	font-size:12pt;
+
+}
+
+a.button{
+margin-top:20px;
+    background-color: #E3E1B8; 
+    padding: 4px 5px;
+   	font-family: Arial, Helvetica, sans-serif;
+	font-size:11pt;
+    text-decoration: none;
+    border: 1px solid #000;
+    border-color: #aaa #444 #444 #aaa;
+    color: #000
+}

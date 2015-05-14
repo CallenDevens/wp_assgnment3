@@ -71,3 +71,8 @@ margin-left:240px;
     color:#FFFFF0;
 	background-color:#2E4E7E;
 }
+input[type="button"],input[type="submit"]
+{
+    margin-left:8px;
+	color:2E4E7E;
+}

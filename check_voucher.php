@@ -1,12 +1,23 @@
 <?php
+session_start();
+
 $voucher=$_POST['voucher'];
-list($code1,$code2,$str)=explode("-",$voucher);
-if(chkCode($code1,substr($str,0,1))&&chkCode($code2,substr($str,1,1)))
+if(isset($voucher))
 {
-    echo "true";
+    list($code1,$code2,$str)=explode("-",$voucher);
+    if(chkCode($code1,substr($str,0,1))&&chkCode($code2,substr($str,1,1)))
+    {
+		$_SESSION['voucher']=$voucher;
+		//print_r($_SESSION['screenings']);
+		//print_r($_SESSION);
+        echo "true";
+    }
+    else{
+       echo "false";
+    }
 }
 else{
-   echo "false";
+	unset($_SESSION['voucher']);
 }
 function chkCode($num, $char){
     $num1=(int)substr($num,0,1);
@@ -29,5 +40,5 @@ function chkCode($num, $char){
 	    return false;
 	}
         
- }
+}
 ?>
