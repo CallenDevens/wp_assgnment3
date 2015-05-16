@@ -3,6 +3,21 @@
 <div id="header">
 	<div id="menu">
 	    <div id="cart">View Shopping Cart</div>
+		    <div id="order"><span>View Orders</span>
+			
+			<div id="orderform">
+			    <form method="GET" action="ticket.php">
+				<table><tr>
+				<td>
+		    	<label>EMAIL<label></td><td><input type="text" name="email" value="" required /></td></tr>
+		    	<tr><td><label>ORDER<label></td><td><input type="text" name="id" value="" required /></td></tr>
+				</table>
+				<br />
+				<input type="submit" value="SUBMIT">
+				<form>
+		    </div>
+			</div>
+		    
 		<img src="images/logo.jpg" alt="logo" />
 		<!-- logo image from Carmike Cinemas-->
 		<ul>

@@ -1,3 +1,4 @@
+
 div{margin:0;border:0;padding:0;}
 body {
     background: #F3F2ED;
@@ -9,20 +10,20 @@ body {
 }
 
 #header{
-        height:60px;
-	width:100%;
+    height:60px;
+	width:1000px;
 	margin:0px auto;
 	background-color:#131313;
 }
 
 #menu {
-    padding-left:200px;
-	width: 800px;
+    padding-left:50px;
+	width: 900px;
 	height:60px;
 }
 #menu ul {
 	height:60px;
-        list-style-type:none;
+    list-style-type:none;
 	margin: 0;
 	padding: 0px;
 }
@@ -50,7 +51,7 @@ body {
 	text-decoration: none;
 	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 80%;
+	font-size: 120%;
 	color: #FFFFFF;
 	letter-spacing: -1px;
         
@@ -74,56 +75,65 @@ body {
 
 #logo{
     margin-top:-22px;
+	margin-left: auto;
+	margin-right:auto;
 	font-family: Helvetica, sans-serif;
-	width:100%;
+	width:1000px;
 	height:200px;
 	background-image:url(images/banner.jpg);
 	background-size:100% 100%;
 }
 #logo h1{
-    padding-left:220px;
+    padding-left:100px;
 	padding-top:40px;
     letter-spacing:2px;
 	font-size:250%;
 	color: #66665E;
-	line-height:0px;
 }
 #logo p{
-    padding-left:220px;    
+    padding-left:100px;    
 	font-size:80%;
 	font-style:italic;
 	color:#444444;
-	line-height:1px;
 }
 
 #main{	
-    margin:          10px auto 10px auto;
+    margin:0 auto;
 	padding-top:20px;
-	padding-right:10px;
-	padding-left:10px;
+	padding-bottom:20px;
 	width:           1000px;
+	min-height:470px;
 	border-color:    #FFFFF0;
-	border-radius:10px;
 	background-color:#FFFFF0;
 	opacity:         0.8;
 	box-shadow:2px 2px 2px 3px #2E4E7E;
 }
 
+#main h1{
+    font-style:bold;
+	margin-bottom:0px;
+	font-weight: normal;
+	color: #2E4E7E;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:10px;
+	
+}
 .text{
-    width:640px;
-	margin-bottom: 45px;
+    width:620px;
+	margin-bottom: 15px;
 	margin-right:10px;
 	margin-left:30px;
-	padding-bottom: 30px;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #E0E0E0;
 
 }
+.title{
+height:20px;
+}
 .text h1{
     font-style:bold;
-   	background: url(images/titlelogo.jpg) no-repeat left 3px;
-    padding-left:40px;
-	margin-bottom:20px;
-    background-size: 30px 30px;
+    padding-left:0px;
+	margin-bottom:10px;
 	margin: 0;
 	font-weight: normal;
 	color: #2E4E7E;
@@ -232,7 +242,7 @@ legend{
 
 }
 
-/*CSS for movies.html */
+/*CSS for movies.php */
 #postBar
 {
     margin:0px auto;
@@ -240,8 +250,7 @@ legend{
     background:url(images/bg_posterbar.jpg);
 	background-size:100% 150%;
 	height:450px;
-	padding:0px 10%;
-	min-width:1100px;
+	width:1000px;
 }
 #postContainer{
 	background-color:rgba(0,0,0,0);
@@ -288,16 +297,6 @@ legend{
 #leftButton:active, #rightButton:active{
     border:none;
 }
-#movieMenu
-{
-    margin:0px auto;
-	position:relative;
-	top:-70px;
-	width:1200px;
-	background-color:rgb(83, 93, 110);
-	height:1000px;
-	padding:5px;
-}
 .showTable {
     width:100%;
     margin-top:5px;
@@ -325,131 +324,127 @@ legend{
 {
     background-color: snow;
 }
-div.divHeader{
-   background-color:rgba(44, 47, 109, 1);
-   height:20px;
-   width:100%;
-   color:snow;
-   text-align:center;
-   font-family: Verdana;
-   font-size:12pt;
-}
-aside#bookingList
-{
-    float:left;
-	width:400px;
-	margin:10px;
-}
-#moviesShow{
-    margin:10px;
-    border: 2px solid rgb(44, 47, 109);
-    float:left;
-	width:700px;
-	background-color:rgb(76, 82, 93);
-}
-div.moviesMeta{
-   margin-top:15px;
-   margin-bottom:15px;
-   margin-left:34px;
-   margin-right:34px;
-   width:280px;
-   float:left;
-   background-color:rgba(76, 82, 93, 1);
-   border:1px solid snow;
-   transition:transform 200ms ease-in;
-}
-#moviesShow div.moviesMeta:hover{
-	border-radius:2px;
-	background-color:rgb(44, 47, 53);
 
-	-webkit-box-shadow:2px 2px 2px 3px #2E4E7E;
-	-moz-box-shadow:2px 2px 2px 3px #2E4E7E;
-	-o-box-shadow:2px 2px 2px 3px #2E4E7E;
-	box-shadow:2px 2px 2px 3px #2E4E7E;
-	
-	-webkit-transform:scale(1.05,1.05);
-    -moz-transform:scale(1.05,1.05);
-	-o-transform:scale(1.05,1.05);
-	transform:scale(1.05,1.05);
+.movie_info
+{
+    border:1px solid;
+	border-radius:8px;
+	margin-left:14px;
+	width:650px;
+	height:400;
+	float:left;
+	background-color:#fefefe;
+	color:rgba(212, 217, 226, 1);
+}
+.movie_info img.poster{
+    width:220px;
+    height:310px;
+	float:left;
+}
+#description{
+    margin-left:10px;
+	float:left;
+	width:390px;
+}
+#description p{
+	margin-left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #66665E;
+}
+#description h1{
+    margin-left:10px;
+	margin-bottom:10px;
+    font-style:bold;
+	margin-bottom:0px;
+	font-weight: normal;
+	color: #2E4E7E;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:10px;
+	border-bottom: 5px dotted #E0E0E0;
+}
+
+div.moviesMeta{
+   margin-left:10px;
+   float:left;
+   width:230px;
+   background-color:#F3F2ED;
+   border:1px solid #2E4E7E;
 }
 div.moviesMeta img.poster_little{
-    margin-left:30px;
-	margin-top:10px;
+    margin-left:5px;
+	margin-top:5px;
     width:220px;
     height:310px;
 	color:rgba(0, 161, 255);
-
-}
-#movieInfo img.poster_little{
-    margin-left:30px;
-	margin-top:20px;
-    width:220px;
-    height:310px;
-	float:left;
 }
 div.moviesMeta h2{
 	font-family: Arial, Helvetica, sans-serif;
-	color:rgb(176, 178, 237);
-	padding-left:10px;
-    margin-left:30px;
+	font-size:14pt;
+	color:#2E4E7E;
+	padding-left:5px;
 	line-height:5px;
-	background: url(images/item.jpg) no-repeat left;
 }
 div.moviesMeta p{
 	font-family: Arial, Helvetica, sans-serif;
-	color:rgb(176, 178, 237);
+	color:#2E4E7E;
     font-size:10pt;
-    margin-left:30px;
-	line-height:5px;
+    margin-left:5px;
 }
-.rating{
-    float:right;
-	margin-right:30px;
-}
-
-/*css for movie detailed information and mask*/
-#mask
-{
-	position:absolute;
-	z-index:10;
-	top:0px;
-	left:0px;
-	background-color:rgba(29, 46, 73, 0.4);
-}
-#movieInfo
-{
-    border:1px solid;
-    position:fixed;
-	z-index:15;
-	width:650px;
-	height:400px;
-	background-color:rgba(79, 86, 100, 1);
-	color:rgba(212, 217, 226, 1);
-}
-#movieDetail{
-    font-family: Verdana;
-	margin-top:20px;
-	margin-left:20px;
-	width:320px;
-	min-height:310px;
+.side{
+	font-family: Arial, Helvetica, sans-serif;
+    border-radius:8px;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1))); 
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%); 
 	float:left;
-    border:2px solid rgb(44, 47, 109);
-}
-#movieDetail table{
-    padding:15px;
-    font-family: Verdana;
-	margin-left:20px;
+	margin-left:10px;
+	box-shadow:1px 1px 1px 1px #2E4E7E;
 	width:300px;
 }
-form#booking{
-   display:none;
-   margin-top:20px;
-   font-family: Verdana;
-   border:2px solid rgb(44, 47, 109);
-   border-style:outset;
-   	position:relative;
-
+.side h2{
+    height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #2E4E7E;
+	margin:10px;
+	padding-left:10px;
+	border-bottom:1px dotted #66665E;
 }
+.side ul{
+    list-style-type:none;
+	padding-left:20px;
+}
+.side ul li{
+   margin-top:8px;
+}
+.side ul li span{
+  font-size:14pt;
+  
+  color: #2E4E7E; 
+}
+.side ul li p{
+   margin-left:5px;
+   display:inline;
+}
+.side ul li div{
+   font-size:10pt;
+   font-style:bold;
+   padding-top:3px;
+   float:right;
+   margin-right:25px;
+   border:1px solid;
+   border-radius:5px;
+   height:17px;
+   width:100px;
+   text-align:center;
+   background-color:#FFFFF0;
+}
+.side ul li div:hover{
+    color:#FFFFF0;
+	background-color:#2E4E7E;
+}
+
 
 .selectArrow{
     width:0px;
@@ -507,9 +502,10 @@ form#booking{
 	left:-20px;
 }
 button.details{
-    margin-left:30px;
+    margin-right:5px;
 	height:30px;
 	width:90px;
+	float:right;
 	margin-bottom:10px;
     background-image:url(images/button_session.png);
 	background-position:center;
@@ -571,6 +567,39 @@ p.errorMessage{
 button#btnCancel{
 
     background-image:url(images/button_cancel.png);
+}
+
+#cart,#order{
+float:right;
+margin-right:5px;
+font-family: Arial, Helvetica, sans-serif;
+color:snow;
+margin-top:10px;
+padding-top:10px;
+height:25px;
+width:125px;
+border-radius:5px;
+border:2px solid #2E4E7E;
+text-align:center;
+}
+#cart:hover,#order:hover{
+background-color:snow;
+color:#2E4E7E;
+}
+#order{
+position:relative;
+}
+#orderform{
+text-align:left;
+padding-top:10px;
+position:absolute;
+top:35px;
+width:280px;
+height:100px;
+background-color:#131313;
+border-radius:5px;
+border:2px solid #2E4E7E;
+display:none;
 }
 /*media query for resize screen*/
 @media screen and (max-width: 600px) {

@@ -45,7 +45,7 @@ function typeConvert($type)
 </head>
 
 <body>
-<?php include("header.php");?>
+<?php include("header_checkout.php");?>
 <script type="text/javascript" src="scripts/checkout.js"></script>
 <div id="logo">
 	<h1>Sliverado</h1>
@@ -141,14 +141,33 @@ else
     echo "<div id='customer_information'>";
 
     echo " <form action='checkout.php' method='POST'>";
-    echo "<h3>Email:</h3><input type='text' name='email' pattern='^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.([A-Za-z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$' required />";
+    echo "<h3>Email:</h3><input type='text' name='email' pattern='^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.([A-Za-z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$' ";
+	if(isset($_SESSION['email'])&&!empty($_SESSION['email']))
+	{
+	    echo "value= '".$_SESSION['email']."' ";
+	}
+	echo "required />";
     echo "<p>used to check your tickets :-D</p>";
 	
-	echo "<h3>MobliePhone number:</h3> <input type='text' name='telenum' pattern='^(\+614|04|\(04\))(\s|-)?(\d){4}(\s|-)?(\d){4}$' required />";
+	echo "<h3>MobliePhone number:</h3> <input type='text' name='telenum' pattern='^(\+614|04|\(04\))(\s|-)?(\d){4}(\s|-)?(\d){4}$' ";
+	if(isset($_SESSION['mobile'])&&!empty($_SESSION['mobile']))
+	{
+	    echo "value= '".$_SESSION['mobile']."' ";
+	}
+	echo "required />";
 	echo "<p> Australian mobile number: begins with +614 or (04) or 04 </p>";
-    echo "<h3>Name:</h3> <input type='text' name='name' pattern='^[A-Za-z\s']{1,}[\.]{0,1}[A-Za-z\s']{0,}$' required />";
+    echo "<h3>Name:</h3> <input type='text' name='name' pattern='^[A-Za-z\s']{1,}[\.]{0,1}[A-Za-z\s']{0,}$' ";
+	
+	if(isset($_SESSION['name'])&&!empty($_SESSION['name']))
+	{
+	    echo "value= '".$_SESSION['name']."' ";
+	}
+	
+	echo "required />";
 
-    echo "	<input type='submit' value='submit' />";
+    echo "	<input type='submit' value='SUBMIT' />";
+	echo "<input type='button' value='SAVE'>";
+	echo "<input type='button' value='RESET'>";
     echo " </form>";
     echo "</div>";
 		echo "</fieldset>";
@@ -157,6 +176,7 @@ else
 
 ?>
 <?php
+$connection=null;
 include('footer.php');
 ?>
 </body>
